@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <button class="toggle-dark-mode" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+  <button id="back-to-top" onclick="scrollToTop()">Back to Top</button>
+  <button class="cat-paw" onclick="playMeow()">🐾</button>
+  <audio id="meow-sound" src="sound/cat-89108.mp3" preload="auto"></audio>
+
+  <header>
+    <h1>Maria Helena Pacheco</h1>
+    <p>Aspiring Front-End Developer</p>
+  </header>
+
+  <section id="journey">
+    <h2>My Learning Journey</h2>
+    <div class="learning-journey-wrapper">
+	  <img src="images/Maria.png" alt="Photo of Maria Helena Pacheco">
+      <div>
+        <p>
+          I started learning HTML and CSS because I love building things that look good and work well. I’ve studied responsive design and the mobile-first approach, and now I’m diving into JavaScript to make things interactive.
+        </p>
+        <p>
+          I’ve completed several online courses and built this site as part of my learning. Every line of code is a step forward — and I’m excited to keep growing, project by project.
+        </p>
+        <p>
+          My goal? To become a confident front-end developer and contribute to websites people love to use.
+        </p>
+      </div>
+    
+    </div>
+
+    <h3>Certificates I’ve Earned</h3>
+    <ul class="certificates">
+  		<li> <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/C3L7AXDP8V2N" 
+			target="_blank">Python for Everybody Specialization – Coursera </a> 
+		</li>
+  		<li>
+			<a href="https://www.coursera.org/account/accomplishments/certificate/A2BRWZD4VQJP" 
+			target ="_blank">Using Databases with Python – Coursera </a>
+		</li>
+  		<li>
+			<a href="https://www.coursera.org/account/accomplishments/certificate/FGDJBQRRQXGM" 
+			target ="_blank">Using Python to Access Web Data – Coursera </a>
+		</li>
+  		<li>
+			<a href="https://www.coursera.org/account/accomplishments/certificate/A7Q7T87TUB57" 
+			target ="_blank">Programming for Everybody (Getting Started with Python) - Coursera </a>
+		</li>
+  		<li>
+			<a href="https://www.coursera.org/account/accomplishments/certificate/TU9N2EQ4WQH9" 
+			target ="_blank">Python Data Structures - Coursera </a>
+		</li>
+ 		 <li>
+			<a href="https://www.coursera.org/account/accomplishments/certificate/W56TU5SVWP3A" 
+			target ="_blank">Spanish Vocabulary: Cultural Experience - Coursera </a>
+		</li>
+		<li>
+			<a href="https://www.coursera.org/account/accomplishments/certificate/CHJ6TAAKNATQ" 
+			target ="_blank">Spanish Vocabulary: Meeting People - Coursera </a>
+		</li>
+    </ul>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul class="skills-list">
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>Responsive Design</li>
+      <li>Flexbox & Grid</li>
+      <li>JavaScript (in progress)</li>
+      <li>Git & GitHub</li>
+    </ul>
+  </section>
+
+  <section id="languages">
+    <h2>Languages & International Experience</h2>
+    <p>I recently moved across continents and love learning about different cultures. I speak:</p>
+    <ul>
+      <li>English – Fluent</li>
+      <li>Croatian – Native</li>
+      <li>Spanish – Beginner (currently learning!)</li>
+    </ul>
+  </section>
+
+  <section id="fun-facts">
+    <h2>Fun Facts About Me</h2>
+    <ul class="fun-facts">
+      <li>I drink coffee like it’s a hobby ☕</li>
+      <li>I love pastel color palettes and cute UI design 🎀</li>
+      <li>I’m really into puzzles and logic games 🧩</li>
+      <li>Every website is better with a hidden cat easter egg. Yes, even this one might have one! </li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Let’s Connect</h2>
+    <p>Feel free to reach out — I’m always open to learning and collaboration!</p>
+    <ul class="contact-links">
+      <li><a href="https://github.com/HelenaPacheco0" target="_blank">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/helena-pacheco/" target="_blank">LinkedIn</a></li>
+      <li><a href="mailto:helenapacheco000@gmail.com">Email Me</a></li>
+    </ul>
+  </section>
+
+  <section class="resume-download">
+    <h2>Download My Resume</h2>
+    <p><a href="resume/MariaHelenaPacheco.pdf" download>Click here to download PDF</a></p>
+  </section>
+
+  <section class="quote-section">
+    <p>“Success is not final, failure is not fatal: it is the courage to continue that counts.” – Winston Churchill</p>
+  </section>
+
+  <footer style="text-align:center; padding:1rem; background-color:#f2f2f2; color:#555; margin-top:2rem;">
+    <p>&copy; 2025 MHPacheco. Built with 💻 and 💖</p>
+  </footer>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+
+    const backToTopBtn = document.getElementById("back-to-top");
+
+    window.onscroll = function () {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        backToTopBtn.style.display = "block";
+      } else {
+        backToTopBtn.style.display = "none";
+      }
+    };
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function playMeow() {
+      const meow = document.getElementById('meow-sound');
+      meow.currentTime = 0;
+      meow.play();
+    }
+  </script>
+</body>
+</html>
